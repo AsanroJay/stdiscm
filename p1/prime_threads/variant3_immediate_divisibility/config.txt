@@ -1,0 +1,18 @@
+# Variant 3 - print immediately, threads split the divisibility test
+# Edit these values and re-run; no recompilation needed.
+# Usage: ./primes            (Windows: primes.exe; reads config.txt in this folder)
+#        ./primes other.txt  (reads another config file)
+
+# x : number of threads to create
+threads = 4
+
+# y : search for primes from 1 up to this number (inclusive)
+limit = 1000
+
+# true  = each output line is printed under a mutex (lines stay whole)
+# false = no lock, line pieces from different threads may tear into each other
+sync_output = true
+
+# spawn = create and join x threads for EVERY number (the literal scheme)
+# pool  = create x threads once; they sync at a barrier for every number
+mode = spawn

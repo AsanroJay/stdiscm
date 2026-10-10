@@ -1,0 +1,10 @@
+# Variant 2 - print after all threads finish, straight range division
+# Edit these values and re-run; no recompilation needed.
+# Usage: ./primes            (Windows: primes.exe; reads config.txt in this folder)
+#        ./primes other.txt  (reads another config file)
+
+# x : number of threads to create
+threads = 4
+
+# y : search for primes from 1 up to this number (inclusive)
+limit = 1000
